@@ -16,13 +16,17 @@ The library is based on the SwiftUI's `Layout` protocol and thus has the followi
 The component's signature:
 
 ``` swift
-WrappingHStack(alignment: Alignment = .center,
+WrappingHStack(alignment: Alignment = .leading,
                horizontalSpacing: CGFloat? = nil,
                verticalSpacing: CGFloat? = nil,
                fitContentWidth: Bool = false)
+
+WrappingHStack(alignment: Alignment = .leading,
+               spacing: CGFloat? = nil,
+               fitContentWidth: Bool = false)
 ```
 
-The component, by default, uses the `.center` alignment, but also supports the following alignment values: `.center`, `.leading`, `.topLeading`, `.top`, `.topTrailing`, `.trailing`, `.bottomTrailing`, `.bottom`, `.bottomLeading`. The rest are treated as `.center`.
+The component, by default, uses the `.leading` alignment, but also supports the following alignment values: `.center`, `.leading`, `.topLeading`, `.top`, `.topTrailing`, `.trailing`, `.bottomTrailing`, `.bottom`, `.bottomLeading`. The rest are treated as `.center`.
 
 The component, by default, uses the system provided spacing, but it's also possible to specify explicit `horizontalSpacing` and `verticalSpacing`.
 

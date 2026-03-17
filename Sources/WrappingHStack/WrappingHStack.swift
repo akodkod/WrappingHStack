@@ -29,10 +29,9 @@ public struct WrappingHStack: Layout {
     /// - Parameters:
     ///   - alignment: The guide for aligning the subviews in this stack. This guide has the same screen coordinate for every subview.
     ///   - horizontalSpacing: The distance between adjacent subviews in a row or `nil` if you want the stack to choose a default distance.
-    ///   - verticalSpacing: The distance between consequtive rows or`nil` if you want the stack to choose a default distance.
+    ///   - verticalSpacing: The distance between consecutive rows or `nil` if you want the stack to choose a default distance.
     ///   - fitContentWidth: Determines if the width of the stack should adjust to fit its content.
-    ///   - content: A view builder that creates the content of this stack.
-    @inlinable public init(alignment: Alignment = .center,
+    @inlinable public init(alignment: Alignment = .leading,
                            horizontalSpacing: CGFloat? = nil,
                            verticalSpacing: CGFloat? = nil,
                            fitContentWidth: Bool = false) {
@@ -40,6 +39,21 @@ public struct WrappingHStack: Layout {
         self.horizontalSpacing = horizontalSpacing
         self.verticalSpacing = verticalSpacing
         self.fitContentWidth = fitContentWidth
+    }
+
+    /// Creates a wrapping horizontal stack with the given spacing and alignment.
+    ///
+    /// - Parameters:
+    ///   - alignment: The guide for aligning the subviews in this stack. This guide has the same screen coordinate for every subview.
+    ///   - spacing: The distance between adjacent subviews in a row and between consecutive rows or `nil` if you want the stack to choose a default distance.
+    ///   - fitContentWidth: Determines if the width of the stack should adjust to fit its content.
+    @inlinable public init(alignment: Alignment = .leading,
+                           spacing: CGFloat? = nil,
+                           fitContentWidth: Bool = false) {
+        self.init(alignment: alignment,
+                  horizontalSpacing: spacing,
+                  verticalSpacing: spacing,
+                  fitContentWidth: fitContentWidth)
     }
 
     public static var layoutProperties: LayoutProperties {
