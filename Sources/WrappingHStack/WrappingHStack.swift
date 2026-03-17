@@ -29,9 +29,8 @@ public struct WrappingHStack: Layout {
     /// - Parameters:
     ///   - alignment: The guide for aligning the subviews in this stack. This guide has the same screen coordinate for every subview.
     ///   - horizontalSpacing: The distance between adjacent subviews in a row or `nil` if you want the stack to choose a default distance.
-    ///   - verticalSpacing: The distance between consequtive rows or`nil` if you want the stack to choose a default distance.
+    ///   - verticalSpacing: The distance between consecutive rows or `nil` if you want the stack to choose a default distance.
     ///   - fitContentWidth: Determines if the width of the stack should adjust to fit its content.
-    ///   - content: A view builder that creates the content of this stack.
     @inlinable public init(alignment: Alignment = .leading,
                            horizontalSpacing: CGFloat? = nil,
                            verticalSpacing: CGFloat? = nil,
@@ -49,7 +48,7 @@ public struct WrappingHStack: Layout {
     ///   - spacing: The distance between adjacent subviews in a row and between consecutive rows or `nil` if you want the stack to choose a default distance.
     ///   - fitContentWidth: Determines if the width of the stack should adjust to fit its content.
     @inlinable public init(alignment: Alignment = .leading,
-                           spacing: CGFloat?,
+                           spacing: CGFloat? = nil,
                            fitContentWidth: Bool = false) {
         self.init(alignment: alignment,
                   horizontalSpacing: spacing,

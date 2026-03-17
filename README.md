@@ -22,7 +22,7 @@ WrappingHStack(alignment: Alignment = .leading,
                fitContentWidth: Bool = false)
 
 WrappingHStack(alignment: Alignment = .leading,
-               spacing: CGFloat?,
+               spacing: CGFloat? = nil,
                fitContentWidth: Bool = false)
 ```
 
